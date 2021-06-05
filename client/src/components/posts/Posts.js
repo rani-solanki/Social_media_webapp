@@ -26,7 +26,6 @@ const Posts = ({getPosts, post : {posts,loading}}) => {
         </Fragment>
     )
 }
-
 Posts.propTypes = {
     getPosts : propTypes.func.isRequired,
     post : propTypes.object.isRequired,

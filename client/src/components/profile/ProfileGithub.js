@@ -4,11 +4,10 @@ import {connect} from 'react-redux';
 import {getGithubRepos} from '../../actions/profile';
 import {Spinner} from '../layout/Spinner';
 
-
 const ProfileGithub = ({username,getGithubRepos,repos}) => {
     useEffect(()=>{
     getGithubRepos(username)
-},[getGithubRepos])
+    }, [getGithubRepos, username])
     return <div className="profile-github">
         <h2 className='text-primary my-1'> Github Repos</h2>
         {repos === null ? <Spinner/> : (
@@ -51,5 +50,4 @@ ProfileGithub.propTypes = {
 const mapStateToProps = state => ({
     repos : state.profile.repos
 })
-
 export default connect(mapStateToProps,{getGithubRepos})(ProfileGithub)

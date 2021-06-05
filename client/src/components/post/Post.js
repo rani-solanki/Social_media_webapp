@@ -12,7 +12,7 @@ const Post = ({getPost,post:{post, loading},match}) => {
     useEffect(()=>{
         getPost(match.params.id);
 
-    },[getPost])
+    },[getPost,post,match])
     return loading || post === null ? <Spinner/> : <Fragment>
         <Link to='/posts' className="btn">
             Back to Posts

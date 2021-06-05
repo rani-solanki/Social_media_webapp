@@ -46,9 +46,7 @@ const PostItem = ({addLike, removeLike,deletePost,auth,post:{_id,text,name,avata
                   <i className="fas fa-times"></i>
                 </button>
             )}
-          
               </Fragment>}
-            
           </div>
           </div>)
 

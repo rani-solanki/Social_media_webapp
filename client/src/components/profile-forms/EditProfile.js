@@ -41,8 +41,8 @@ const EditProfile = ({ profile:{profile,loading},createProfile,getCurrentProfile
             
 
         });
-    },[loading,getCurrentProfile]);
-
+    }, [profile, loading,getCurrentProfile,createProfile]);
+  
     const{
         company,
         website,
